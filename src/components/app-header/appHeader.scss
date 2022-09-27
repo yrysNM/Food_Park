@@ -1,0 +1,142 @@
+.header {
+    min-height: 100px;
+
+    & .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        padding: 38px 0 36px 0;
+
+        &-text {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 25px;
+            letter-spacing: 0.15em;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 72px;
+
+        &_search {
+            width: 555px;
+            border: none;
+            outline: none;
+            background: #504B4A;
+            border-radius: 10px;
+            padding: 15px 0 16px 48px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+
+            color: #CFCFCF;
+
+        }
+
+        &_form {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+        }
+
+        &_locationIcon,
+        &_searchIcon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        &_locationIcon {
+            left: 15px;
+        }
+
+        &_searchIcon {
+            right: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        &_contact {
+            margin-left: 30px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+        }
+
+        &_phone {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+    }
+
+    &__basket {
+        margin-left: 188px;
+        width: 150px;
+
+        &_wrapper {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+            border-radius: 10px;
+            padding: 7px 0 7px 0;
+            cursor: pointer;
+        }
+
+        &_text {
+            padding: 11px 20px 10px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #FFFFFF;
+            border: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            margin-right: 12px;
+        }
+
+        &_count {
+            // padding: 7px 14px 7px 12px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 100%;
+
+            .countText {
+                position: relative;
+                z-index: 100;
+                font-weight: 600;
+                font-size: 12px;
+                color: #403C3B;
+            }
+        }
+    }
+}
+
+.headTitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #CFCFCF;
+}
+
+.phoneText {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
