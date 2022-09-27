@@ -5,9 +5,9 @@ const App = () => {
     return (
         <div className="app">
             <AppHeader />
-            <div className="container">
-                <AppFoods foodsData={data} />
-            </div>
+            <AppFoods foodsData={data} titleHeadText={"ХОЛОДНЫЕ ЗАКУСКИ"} />
+            <AppFoods foodsData={data} titleHeadText={"ГОРЯЧИЕ ЗАКУСКИ"} />
+            <AppFoods foodsData={data} titleHeadText={"Мясные блюда"} />
         </div>
     );
 }

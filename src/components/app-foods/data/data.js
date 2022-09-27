@@ -31,8 +31,35 @@ const data = [
         foodDescr: "Фаршированная рисом, курагой и айвой",
         foodPrice: "3 230 ₽",
         imgUrl: food4
-    }
-
+    },
+    {
+        foodName: "Ягненок",
+        foodWidth: "225 г",
+        foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
+        foodPrice: "620 ₽",
+        imgUrl: food1
+    },
+    {
+        foodName: "Индейка",
+        foodWidth: "225 г",
+        foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
+        foodPrice: "450 ₽",
+        imgUrl: food2
+    },
+    {
+        foodName: "Гусь",
+        foodWidth: "225 г",
+        foodDescr: "Фаршированный яблоками",
+        foodPrice: "7 900 ₽",
+        imgUrl: food3
+    },
+    {
+        foodName: "Утка",
+        foodWidth: "225 г",
+        foodDescr: "Фаршированная рисом, курагой и айвой",
+        foodPrice: "3 230 ₽",
+        imgUrl: food4
+    },
 ];
 
 export default data;

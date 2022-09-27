@@ -1,53 +1,104 @@
-import food1 from "../../resources/img/foods/food1.png";
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 import buyBasketIcon from "../../resources/icons/buy.svg";
+import minusIcon from "../../resources/icons/minus.svg";
+import plusIcon from "../../resources/icons/plus.svg";
+
+import "swiper/css";
+import "swiper/css/pagination";
 import "./appFoods.scss";
 
-const AppFoods = ({ foodsData }) => {
+const AppFoods = ({ foodsData, titleHeadText }) => {
+    const [toggleBlocks, setToggleBlocks] = useState(false);
+    const basketBlock = useRef();
+    const addRemoveBlock = useRef();
+
+    const mouseOver = () => {
+        setToggleBlocks(false);
+    }
+
+    const mouseUp = () => {
+        setToggleBlocks(true);
+    }
+
     return (
-        <section className="foods">
-            <div className="title">
-                <div className="title-headText">
-                    ХОЛОДНЫЕ ЗАКУСКИ
+        <div className="foods">
+            <div className="container">
+
+                <div className="title">
+                    <div className="title-headText">
+                        {titleHeadText}
+                    </div>
+
                 </div>
-
             </div>
-            <div className="foods__wrapper">
-                {foodsData.map((food, i) => {
-                    return (
-                        <div key={i} className="foods__wrapper_block">
-                            <div className="foods__wrapper_img">
-                                <img src={food.imgUrl} alt="food 1" />
-                            </div>
+            <div className="foods__wrapper" style={{ borderBottom: `${(titleHeadText === "Мясные блюда") ? "none" : "1px solid #504d4d"}` }}>
+                <Swiper
+                    slidesPerView={4}
+                    spaceBetween={20}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper">
 
-                            <div className="foods__wrapper_descrs">
-                                <div className="foods__wrapper_info">
-                                    <div className="descrHeadText">
-                                        {food.foodName}
+                    {foodsData.map((food, i) => {
+                        return (
+                            <SwiperSlide key={i} >
+
+                                <div className="foods__wrapper_block" onMouseOver={mouseUp} onMouseOut={mouseOver}>
+                                    <div className="foods__wrapper_img">
+                                        <img src={food.imgUrl} alt="food 1" />
                                     </div>
-                                    <div className="foodWidth">
-                                        Вес: {food.foodWidth}
+
+                                    <div className="foods__wrapper_descrs">
+                                        <div className="foods__wrapper_info">
+                                            <div className="descrHeadText">
+                                                {food.foodName}
+                                            </div>
+                                            <div className="foodWidth">
+                                                Вес: {food.foodWidth}
+                                            </div>
+                                        </div>
+
+                                        <div className="foods__wrapper_text">
+                                            {food.foodDescr.slice(0, 30)}...
+                                        </div>
+
+                                        <div
+                                            className="foods__wrapper_price"
+                                            ref={basketBlock}
+                                            style={{ opacity: `${toggleBlocks ? "0" : "1"}`, visibility: `${toggleBlocks ? "hidden" : "visible"}` }} >
+                                            <div className="price">{food.foodPrice}</div>
+                                            <button className="btn btn-basket">
+                                                В корзину
+                                                <span className="iconBasket">
+                                                    <img src={buyBasketIcon} alt="icon basket" />
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div
+                                            className="foods__wrapper_addRemove"
+                                            ref={addRemoveBlock}
+                                            style={{ opacity: `${toggleBlocks ? "1" : "0"}`, visibility: `${toggleBlocks ? "visible" : "hidden"}` }}>
+                                            <button className="btn btn-minus">
+                                                <img src={minusIcon} alt="minus icon" />
+                                            </button>
+                                            <span>{food.foodPrice}</span>
+                                            <button className="btn btn-plus">
+                                                <img src={plusIcon} alt="plus icon" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div className="foods__wrapper_text">
-                                    {food.foodDescr.slice(0, 30)}...
-                                </div>
-
-                                <div className="foods__wrapper_price">
-                                    <div className="price">{food.foodPrice}</div>
-                                    <button className="btn btn-basket">
-                                        В корзину
-                                        <span className="iconBasket">
-                                            <img src={buyBasketIcon} alt="icon basket" />
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </div>
-        </section>
+        </div>
     );
 }
 
