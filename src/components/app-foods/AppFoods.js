@@ -11,15 +11,18 @@ import "./appFoods.scss";
 
 const AppFoods = ({ foodsData, titleHeadText }) => {
     const [toggleBlocks, setToggleBlocks] = useState(false);
+    const [indexFoodChange, setIndexFoodChange] = useState(null);
     const basketBlock = useRef();
     const addRemoveBlock = useRef();
 
-    const mouseOver = () => {
+    const mouseOver = (indexFood) => {
         setToggleBlocks(false);
+        setIndexFoodChange(indexFood);
     }
 
-    const mouseUp = () => {
+    const mouseUp = (indexFood) => {
         setToggleBlocks(true);
+        setIndexFoodChange(indexFood);
     }
 
     return (
@@ -47,7 +50,7 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                         return (
                             <SwiperSlide key={i} >
 
-                                <div className="foods__wrapper_block" onMouseOver={mouseUp} onMouseOut={mouseOver}>
+                                <div className="foods__wrapper_block" onMouseOver={() => mouseUp(i)} onMouseOut={() => mouseOver(i)}>
                                     <div className="foods__wrapper_img">
                                         <img src={food.imgUrl} alt="food 1" />
                                     </div>
@@ -66,31 +69,40 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                                             {food.foodDescr.slice(0, 30)}...
                                         </div>
 
-                                        <div
-                                            className="foods__wrapper_price"
-                                            ref={basketBlock}
-                                            style={{ opacity: `${toggleBlocks ? "0" : "1"}`, visibility: `${toggleBlocks ? "hidden" : "visible"}` }} >
-                                            <div className="price">{food.foodPrice}</div>
-                                            <button className="btn btn-basket">
-                                                В корзину
-                                                <span className="iconBasket">
-                                                    <img src={buyBasketIcon} alt="icon basket" />
-                                                </span>
-                                            </button>
-                                        </div>
+                                        {indexFoodChange === i ?
+                                            <Viewer
+                                                toggleBlocks={toggleBlocks}
+                                                basketBlock={basketBlock}
+                                                addRemoveBlock={addRemoveBlock}
+                                                food={food} /> :
+                                            <>
+                                                <div
+                                                    className="foods__wrapper_price"
+                                                    ref={basketBlock}
+                                                >
+                                                    <div className="price">{food.foodPrice}</div>
+                                                    <button className="btn btn-basket">
+                                                        В корзину
+                                                        <span className="iconBasket">
+                                                            <img src={buyBasketIcon} alt="icon basket" />
+                                                        </span>
+                                                    </button>
+                                                </div>
 
-                                        <div
-                                            className="foods__wrapper_addRemove"
-                                            ref={addRemoveBlock}
-                                            style={{ opacity: `${toggleBlocks ? "1" : "0"}`, visibility: `${toggleBlocks ? "visible" : "hidden"}` }}>
-                                            <button className="btn btn-minus">
-                                                <img src={minusIcon} alt="minus icon" />
-                                            </button>
-                                            <span>{food.foodPrice}</span>
-                                            <button className="btn btn-plus">
-                                                <img src={plusIcon} alt="plus icon" />
-                                            </button>
-                                        </div>
+                                                <div
+                                                    className="foods__wrapper_addRemove"
+                                                    ref={addRemoveBlock}
+                                                >
+                                                    <button className="btn btn-minus">
+                                                        <img src={minusIcon} alt="minus icon" />
+                                                    </button>
+                                                    <span>{food.foodPrice}</span>
+                                                    <button className="btn btn-plus">
+                                                        <img src={plusIcon} alt="plus icon" />
+                                                    </button>
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -99,6 +111,39 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                 </Swiper>
             </div>
         </section>
+    );
+}
+
+
+const Viewer = ({ toggleBlocks, basketBlock, addRemoveBlock, food }) => {
+    return (
+        <>
+            <div
+                className="foods__wrapper_price"
+                ref={basketBlock}
+                style={{ opacity: `${toggleBlocks ? "0" : "1"}`, visibility: `${toggleBlocks ? "hidden" : "visible"}` }} >
+                <div className="price">{food.foodPrice}</div>
+                <button className="btn btn-basket">
+                    В корзину
+                    <span className="iconBasket">
+                        <img src={buyBasketIcon} alt="icon basket" />
+                    </span>
+                </button>
+            </div>
+
+            <div
+                className="foods__wrapper_addRemove"
+                ref={addRemoveBlock}
+                style={{ opacity: `${toggleBlocks ? "1" : "0"}`, visibility: `${toggleBlocks ? "visible" : "hidden"}` }}>
+                <button className="btn btn-minus">
+                    <img src={minusIcon} alt="minus icon" />
+                </button>
+                <span>{food.foodPrice}</span>
+                <button className="btn btn-plus">
+                    <img src={plusIcon} alt="plus icon" />
+                </button>
+            </div>
+        </>
     );
 }
 
