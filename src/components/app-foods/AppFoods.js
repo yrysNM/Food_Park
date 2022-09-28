@@ -23,13 +23,13 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
     }
 
     return (
-        <div className="foods">
+        <section className="foods">
             <div className="container">
 
                 <div className="title">
-                    <div className="title-headText">
+                    <h2 className="title-headText">
                         {titleHeadText}
-                    </div>
+                    </h2>
 
                 </div>
             </div>
@@ -98,7 +98,7 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                     })}
                 </Swiper>
             </div>
-        </div>
+        </section>
     );
 }
 

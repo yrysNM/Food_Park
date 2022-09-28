@@ -74,6 +74,10 @@ ol {
     height: auto;
 }
 
+iframe {
+    filter: hue-rotate(160deg) saturate(0) grayscale(31%) brightness(0.3);
+}
+
 .container {
     width: 100%;
     max-width: 1400px;
