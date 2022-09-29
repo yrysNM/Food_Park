@@ -66,8 +66,7 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                                         </div>
 
                                         <div className="foods__wrapper_text">
-                                            {food.foodDescr.slice(0, 30)}...
-                                        </div>
+                                            {food.foodDescr}                                        </div>
 
                                         {indexFoodChange === i ?
                                             <Viewer
