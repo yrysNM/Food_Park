@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import { Pagination } from "swiper";
 import buyBasketIcon from "../../resources/icons/buy.svg";
 import minusIcon from "../../resources/icons/minus.svg";
@@ -49,61 +50,63 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                     {foodsData.map((food, i) => {
                         return (
                             <SwiperSlide key={i} >
+                                <Link to={`/food/${i}`}>
 
-                                <div className="foods__wrapper_block" onMouseOver={() => mouseUp(i)} onMouseOut={() => mouseOver(i)}>
-                                    <div className="foods__wrapper_img">
-                                        <img src={food.imgUrl} alt="food 1" />
-                                    </div>
-
-                                    <div className="foods__wrapper_descrs">
-                                        <div className="foods__wrapper_info">
-                                            <div className="descrHeadText">
-                                                {food.foodName}
-                                            </div>
-                                            <div className="foodWidth">
-                                                Вес: {food.foodWidth}
-                                            </div>
+                                    <div className="foods__wrapper_block" onMouseOver={() => mouseUp(i)} onMouseOut={() => mouseOver(i)}>
+                                        <div className="foods__wrapper_img">
+                                            <img src={food.imgUrl} alt="food 1" />
                                         </div>
 
-                                        <div className="foods__wrapper_text">
-                                            {food.foodDescr}                                        </div>
-
-                                        {indexFoodChange === i ?
-                                            <Viewer
-                                                toggleBlocks={toggleBlocks}
-                                                basketBlock={basketBlock}
-                                                addRemoveBlock={addRemoveBlock}
-                                                food={food} /> :
-                                            <>
-                                                <div
-                                                    className="foods__wrapper_price"
-                                                    ref={basketBlock}
-                                                >
-                                                    <div className="price">{food.foodPrice}</div>
-                                                    <button className="btn btn-basket">
-                                                        В корзину
-                                                        <span className="iconBasket">
-                                                            <img src={buyBasketIcon} alt="icon basket" />
-                                                        </span>
-                                                    </button>
+                                        <div className="foods__wrapper_descrs">
+                                            <div className="foods__wrapper_info">
+                                                <div className="descrHeadText">
+                                                    {food.foodName}
                                                 </div>
-
-                                                <div
-                                                    className="foods__wrapper_addRemove"
-                                                    ref={addRemoveBlock}
-                                                >
-                                                    <button className="btn btn-minus">
-                                                        <img src={minusIcon} alt="minus icon" />
-                                                    </button>
-                                                    <span>{food.foodPrice}</span>
-                                                    <button className="btn btn-plus">
-                                                        <img src={plusIcon} alt="plus icon" />
-                                                    </button>
+                                                <div className="foodWidth">
+                                                    Вес: {food.foodWidth}
                                                 </div>
-                                            </>
-                                        }
+                                            </div>
+
+                                            <div className="foods__wrapper_text">
+                                                {food.foodDescr}                                        </div>
+
+                                            {indexFoodChange === i ?
+                                                <Viewer
+                                                    toggleBlocks={toggleBlocks}
+                                                    basketBlock={basketBlock}
+                                                    addRemoveBlock={addRemoveBlock}
+                                                    food={food} /> :
+                                                <>
+                                                    <div
+                                                        className="foods__wrapper_price"
+                                                        ref={basketBlock}
+                                                    >
+                                                        <div className="price">{food.foodPrice}</div>
+                                                        <button className="btn btn-basket">
+                                                            В корзину
+                                                            <span className="iconBasket">
+                                                                <img src={buyBasketIcon} alt="icon basket" />
+                                                            </span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div
+                                                        className="foods__wrapper_addRemove"
+                                                        ref={addRemoveBlock}
+                                                    >
+                                                        <button className="btn btn-minus">
+                                                            <img src={minusIcon} alt="minus icon" />
+                                                        </button>
+                                                        <span>{food.foodPrice}</span>
+                                                        <button className="btn btn-plus">
+                                                            <img src={plusIcon} alt="plus icon" />
+                                                        </button>
+                                                    </div>
+                                                </>
+                                            }
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </SwiperSlide>
                         )
                     })}
