@@ -1,0 +1,47 @@
+* [33mcommit 0957487f1fa507b238799e04e7939c44733c2ded[m[33m ([m[1;36mHEAD -> [m[1;32mnurda[m[33m, [m[1;31morigin/nurda[m[33m)[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Thu Sep 29 17:41:50 2022 +0600
+[31m|[m 
+[31m|[m     Install axios and react-router-dom
+[31m|[m 
+* [33mcommit 8939649282d96bbe1dedef35b47a817af1949ce1[m[33m ([m[1;31morigin/nur[m[33m, [m[1;32mnur[m[33m)[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Wed Sep 28 22:03:06 2022 +0600
+[31m|[m 
+[31m|[m     Footer finish and scrollTo still
+[31m|[m 
+* [33mcommit 661caf4b0b357aabe6936cf17432daf521ac5807[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Wed Sep 28 20:53:18 2022 +0600
+[31m|[m 
+[31m|[m     Testing
+[31m|[m 
+* [33mcommit 2aa9a1b55b975ff239bc9b35cacc2c4438423ae7[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Tue Sep 27 17:35:05 2022 +0600
+[31m|[m 
+[31m|[m     Footer Start
+[31m|[m 
+* [33mcommit 2ca5ec90dbbd37979329ecdafd0498e70a2fbcaf[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Tue Sep 27 17:30:56 2022 +0600
+[31m|[m 
+[31m|[m     Finish About Block
+[31m|[m 
+* [33mcommit 3621d452fbdc9ae76f0c33bfe0c6698a88120d37[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Tue Sep 27 16:39:41 2022 +0600
+[31m|[m 
+[31m|[m     Finish Main Block and submenu
+[31m|[m 
+* [33mcommit 2fce1118fb802feeb403b037217cf8ab8c250c99[m
+[31m|[m Author: Nurdaulet123456 <nurdauletdeveloper@gmail.com>
+[31m|[m Date:   Tue Sep 27 11:21:44 2022 +0600
+[31m|[m 
+[31m|[m     Update
+[31m|[m 
+* [33mcommit 5853c875772209aa18b054402b7c18ed9e09749f[m
+  Author: yrysNM <yrys.n3m@gmail.com>
+  Date:   Mon Sep 26 12:13:44 2022 +0600
+  
+      Initialize project using Create React App
