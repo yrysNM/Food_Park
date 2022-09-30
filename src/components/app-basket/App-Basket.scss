@@ -1,0 +1,130 @@
+.basket {
+    width: 100%;
+    max-width: 1096px;
+    margin: 0 auto;
+
+    padding: 4rem 0;
+
+    .basket__data {
+        width: 100%;
+
+        border-radius: 1rem;
+        background: linear-gradient(90deg, #494544 0%, #504B4A 100%) no-repeat center;
+       .data {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255,255,255, .2);
+
+        .basket__des {
+            border: none;
+            width: 26.97px;
+            height: 26.97px;
+
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;  
+            background: #72A479;
+            cursor: pointer;
+        }
+       }
+    }
+}
+
+.basket__inf {
+    display: flex;
+
+    .basket__content {
+        width: 100%;
+        max-width: 400px;
+        margin-left: 4.9rem;
+        
+        .basket_title {
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            text-transform: uppercase;
+
+            margin-bottom: 0.4rem;
+        }
+
+        .basket__subtitle {
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #A6A7AB;
+        }
+    }
+}
+
+.price {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.span {
+    display: inline-block;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.basket__data-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+
+    margin: 4rem 0;
+}
+
+.basket__data {
+    &.add {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.add__content {
+    text-align: center;
+}
+
+.data__add {
+    padding: 2rem;
+
+    border-right: 1px solid rgba(255,255,255, .2);
+}
+
+.add__content-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+
+.add__btn {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #C6CED1;
+    cursor: pointer;
+
+    .basket__des {
+        border: none;
+        width: 18px;
+        height: 18px;
+
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;  
+        text-align: center;
+        background: #72A479;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+}

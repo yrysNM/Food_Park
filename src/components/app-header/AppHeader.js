@@ -1,6 +1,7 @@
 import searchIcon from "../../resources/icons/search.svg";
 import phoneIcon from "../../resources/icons/phone.svg";
 import locationIcon from "../../resources/icons/location.svg";
+import { Link } from "react-router-dom";
 
 import "./appHeader.scss";
 
@@ -43,9 +44,9 @@ const AppHeader = () => {
 
                     <div className="header__basket">
                         <div className="header__basket_wrapper">
-                            <div className="header__basket_text">
+                            <Link to={'/basket'} className="header__basket_text">
                                 Корзина
-                            </div>
+                            </Link>
                             <div className="header__basket_count">
                                 <div className="countText">4</div>
                             </div>
