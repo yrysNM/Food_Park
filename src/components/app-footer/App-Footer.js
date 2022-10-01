@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./App-Footer.scss";
 import Arrow from "../../resurce/img/icons/arrow.svg";
 
@@ -54,9 +55,11 @@ const AppFooter = () => {
               <a href="/" className="footer__link-nav">
                 Возврат товара
               </a>
-              <a href="/" className="footer__link-nav">
-                Акции
-              </a>
+              <Link to={"/stock"}>
+                <span className="footer__link-nav">
+                  Акции
+                </span>
+              </Link>
             </div>
           </div>
         </div>

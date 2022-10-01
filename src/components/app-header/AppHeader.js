@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useEffect, useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import searchIcon from "../../resources/icons/search.svg";
 import phoneIcon from "../../resources/icons/phone.svg";
 import locationIcon from "../../resources/icons/location.svg";
@@ -5,12 +8,20 @@ import locationIcon from "../../resources/icons/location.svg";
 import "./appHeader.scss";
 
 const AppHeader = () => {
+    const { changeStylePosition } = useContext(DataContext)
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeStylePosition);
+    }, []);
+
     return (
         <header className="header">
             <div className="container">
                 <div className="nav">
                     <div className="header__logo">
-                        <h1 className="header__logo-text">Food Park</h1>
+                        <Link to={"/"}>
+                            <h1 className="header__logo-text">Food Park</h1>
+                        </Link>
                     </div>
 
                     <div className="header__info">
