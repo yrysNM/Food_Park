@@ -55,7 +55,7 @@ const AppFooter = () => {
               <a href="/" className="footer__link-nav">
                 Возврат товара
               </a>
-              <Link to={"/stock"}>
+              <Link to={"/promotion"}>
                 <span className="footer__link-nav">
                   Акции
                 </span>
