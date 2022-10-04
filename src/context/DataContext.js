@@ -1,14 +1,19 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
+import data from "../components/app-foods/data/data";
+
 export const DataContext = createContext(null);
 
 const DataContextProvider = ({ children }) => {
     const [toggleStylePositionFixed, setToggleStylePosition] = useState(false);
     const [isMainPage, setIsMainPage] = useState(false);
+    const [foodPageId, setFoodPageId] = useState("");
 
     const isMainPageCheckFunc = () => {
-        console.log(window.location.pathname);
-        if (window.location.pathname !== "/") {
+        const PATH = window.location.pathname;
+        const lastIndexPathId = PATH.lastIndexOf("/");
+        setFoodPageId(PATH.substring(lastIndexPathId + 1, PATH.length));
 
+        if (PATH !== "/") {
             setIsMainPage(false);
         } else {
             setIsMainPage(true);
@@ -28,8 +33,10 @@ const DataContextProvider = ({ children }) => {
         <DataContext.Provider value={{
             toggleStylePositionFixed,
             isMainPage,
+            data,
+            foodPageId,
             changeStylePosition,
-            isMainPageCheckFunc
+            isMainPageCheckFunc,
         }}>
             {children}
         </DataContext.Provider>

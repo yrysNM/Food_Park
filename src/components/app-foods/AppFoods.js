@@ -47,12 +47,12 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                     modules={[Pagination]}
                     className="mySwiper">
 
-                    {foodsData.map((food, i) => {
+                    {foodsData.map((food) => {
                         return (
-                            <SwiperSlide key={i} >
-                                <Link to={`/food/${i}`}>
+                            <SwiperSlide key={food.id} >
+                                <Link to={`/food/${food.id}`}>
 
-                                    <div className="foods__wrapper_block" onMouseOver={() => mouseUp(i)} onMouseOut={() => mouseOver(i)}>
+                                    <div className="foods__wrapper_block" onMouseOver={() => mouseUp(food.id)} onMouseOut={() => mouseOver(food.id)}>
                                         <div className="foods__wrapper_img">
                                             <img src={food.imgUrl} alt="food 1" />
                                         </div>
@@ -68,9 +68,10 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
                                             </div>
 
                                             <div className="foods__wrapper_text">
-                                                {food.foodDescr}                                        </div>
+                                                {food.foodDescr}
+                                            </div>
 
-                                            {indexFoodChange === i ?
+                                            {indexFoodChange === food.id ?
                                                 <Viewer
                                                     toggleBlocks={toggleBlocks}
                                                     basketBlock={basketBlock}

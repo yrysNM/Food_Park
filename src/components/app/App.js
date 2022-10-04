@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AppHeader from "../app-header/AppHeader";
 import AppSubMenu from "../app-submenu/App-Submenu";
-import { AppHome, FoodCards, FoodStock } from "../pages";
+import { AppHome, FoodCard, FoodStock } from "../pages";
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
         <AppSubMenu />
         <Routes>
           <Route path="/" element={<AppHome />} />
-          <Route path="/food/:id" elements={<FoodCards />} />
+          <Route path="/food/:id" element={<FoodCard />} />
           <Route path="/stock" element={<FoodStock />} />
         </Routes>
       </div>

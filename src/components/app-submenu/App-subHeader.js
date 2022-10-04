@@ -6,8 +6,7 @@ const AppSubHeader = () => {
     const { toggleStylePositionFixed, isMainPage } = useContext(DataContext);
     return (
         <div
-            className={`subheader ${toggleStylePositionFixed && isMainPage === true ? "active" : ""}`}
-            style={{ position: `${isMainPage ? "" : "fixed"}`, top: `${isMainPage ? "" : "100px"}` }}>
+            className={`subheader ${toggleStylePositionFixed && isMainPage === true ? "active" : ""} ${isMainPage === true ? "" : "active2"}`}>
             <div className="container">
                 <div className="subheader__inner">
                     <nav className="nav">

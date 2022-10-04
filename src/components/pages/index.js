@@ -1,4 +1,4 @@
 import AppHome from "./app-home";
-import FoodCards from "./food-cards";
+import FoodCard from "./food-card";
 import FoodStock from "./food-stock";
-export { AppHome, FoodCards, FoodStock };
+export { AppHome, FoodCard, FoodStock };

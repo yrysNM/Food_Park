@@ -1,5 +1,5 @@
 import AppFoodCard from "../../app-foodCard/AppFoodCard";
-const AppFoodCards = () => {
+const FoodCard = () => {
     return (
         <>
             <AppFoodCard />
@@ -7,4 +7,4 @@ const AppFoodCards = () => {
     );
 }
 
-export default AppFoodCards;
+export default FoodCard;
