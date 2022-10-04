@@ -7,10 +7,10 @@ const Context = ({children}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     function basketDicrementAndIncrement() {
-        if (baksetCount > -1) {
-            setBasketCount(0);
+        if (baksetCount < 0) {
+            basketDecrement(baksetCount, setBasketCount);
         } else {
-            setBasketCount(baksetCount + 1);
+            basketIncrement(baksetCount, setBasketCount);
         }
     }
 

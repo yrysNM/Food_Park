@@ -2,6 +2,7 @@ import "./App-Footer.scss";
 import Arrow from "../../resurce/img/icons/arrow.svg";
 
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const AppFooter = () => {
   useEffect(() => {
@@ -48,9 +49,9 @@ const AppFooter = () => {
               <a href="/" className="footer__link-nav">
                 О ресторане
               </a>
-              <a href="/" className="footer__link-nav">
+              <Link to={'/terms'} className="footer__link-nav">
                 Условия доставки
-              </a>
+              </Link>
               <a href="/" className="footer__link-nav">
                 Возврат товара
               </a>
