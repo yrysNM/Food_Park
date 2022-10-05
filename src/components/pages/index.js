@@ -1,4 +1,5 @@
 import AppHome from "./app-home";
 import FoodCard from "./food-card";
 import FoodPromotion from "./food-promotion";
-export { AppHome, FoodCard, FoodPromotion };
+import OrderProcessing from "./order-processing";
+export { AppHome, FoodCard, FoodPromotion, OrderProcessing };

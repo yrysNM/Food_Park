@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
 import "./App-Submenu.scss";
 
@@ -10,7 +11,9 @@ const AppSubHeader = () => {
             <div className="container">
                 <div className="subheader__inner">
                     <nav className="nav">
-                        <a href="/" className="nav__link active">Холодные закуски</a>
+                        <Link to="/orderProcessing">
+                            <span className="nav__link active">Холодные закуски</span>
+                        </Link>
                         <a href="/" className="nav__link">Горячие закуски</a>
                         <a href="/" className="nav__link">Мясные блюда</a>
                         <a href="/" className="nav__link">Супы</a>
