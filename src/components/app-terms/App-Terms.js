@@ -6,7 +6,7 @@ const AppTerms = () => {
         <div className="terms">
             <div className="container">
                 <div className="terms__inner">
-                    asdasd
+                   цуйууйц 
                 </div>
             </div>
         </div>
