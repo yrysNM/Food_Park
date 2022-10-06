@@ -49,9 +49,21 @@
         border-radius: 10px 0 0 10px;
         border: 1px solid #72A479;
 
-        &:nth-child(2) {
+        &_hidden {
             border-radius: 0 10px 10px 0;
             background: inherit;
+        }
+
+        &.brR {
+            border-radius: 10px 0 0 10px;
+        }
+
+        &.brL {
+            border-radius: 0 10px 10px 0;
+        }
+
+        &.brB {
+            border-radius: 0;
         }
     }
 }
