@@ -1,0 +1,75 @@
+.orderFood {
+    padding-top: 230px;
+    width: 1120px;
+    margin: 0 auto;
+
+    &__pageRegular {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+
+        &_arrow {
+            margin-right: 11px;
+            cursor: pointer;
+        }
+
+        &_text {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 4px;
+        }
+    }
+
+    // &__btns {
+    // }
+
+    &__form {
+        margin-top: 54px;
+        padding: 34px 29px 55px 30px;
+        background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+        border-radius: 10px;
+
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &_headText {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+
+        &_title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 30px;
+        }
+    }
+
+    &__headInfo {
+        margin-top: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    &__addressTime {
+        display: flex;
+        align-items: center;
+
+        .timeText {
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 10px;
+            color: #FFFFFF;
+
+        }
+    }
+}
