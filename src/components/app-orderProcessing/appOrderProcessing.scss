@@ -1,0 +1,129 @@
+.orderFood {
+    padding-top: 230px;
+    width: 1120px;
+    margin: 0 auto;
+
+    &__pageRegular {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+
+        &_arrow {
+            margin-right: 11px;
+            cursor: pointer;
+        }
+
+        &_text {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 4px;
+        }
+    }
+
+    &_surB {
+        padding: 21px 0 21px 30px;
+        background: inherit;
+        width: 20%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+
+        &.surP {
+            padding: 21px 43px 21px 30px;
+            width: auto;
+        }
+    }
+
+    &_surContainer {
+        &.surBlock {
+            display: block;
+            margin-top: 0;
+        }
+    }
+
+    &_bg {
+        padding: 21px 29px 21px 29px;
+        background: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        margin-left: 33px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #fff;
+
+        .cDown,
+        .cNumber {
+            margin-right: 18px;
+        }
+
+        .cDown,
+        .cUp {
+            transform: scale(1.7);
+            cursor: pointer;
+        }
+    }
+
+    &__form {
+        margin-top: 54px;
+        padding: 34px 29px 55px 30px;
+        background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+        border-radius: 10px;
+
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &_headText {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+
+        &_title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 30px;
+        }
+    }
+
+    &__headInfo,
+    &_surContainer {
+        margin-top: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &.ft {
+            justify-content: flex-start;
+        }
+    }
+
+    &__addressTime {
+        display: flex;
+        align-items: center;
+
+        .timeText {
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 10px;
+            color: #FFFFFF;
+
+        }
+    }
+}

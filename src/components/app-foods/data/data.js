@@ -5,6 +5,7 @@ import food4 from "../../../resources/img/foods/food4.png";
 
 const data = [
     {
+        id: 1,
         foodName: "Ягненок",
         foodWidth: "225 г",
         foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
@@ -12,6 +13,7 @@ const data = [
         imgUrl: food1
     },
     {
+        id: 2,
         foodName: "Индейка",
         foodWidth: "225 г",
         foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
@@ -19,6 +21,7 @@ const data = [
         imgUrl: food2
     },
     {
+        id: 3,
         foodName: "Гусь",
         foodWidth: "225 г",
         foodDescr: "Фаршированный яблоками",
@@ -26,6 +29,7 @@ const data = [
         imgUrl: food3
     },
     {
+        id: 4,
         foodName: "Утка",
         foodWidth: "225 г",
         foodDescr: "Фаршированная рисом, курагой и айвой",
@@ -33,6 +37,7 @@ const data = [
         imgUrl: food4
     },
     {
+        id: 5,
         foodName: "Ягненок",
         foodWidth: "225 г",
         foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
@@ -40,6 +45,7 @@ const data = [
         imgUrl: food1
     },
     {
+        id: 6,
         foodName: "Индейка",
         foodWidth: "225 г",
         foodDescr: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
@@ -47,6 +53,7 @@ const data = [
         imgUrl: food2
     },
     {
+        id: 7,
         foodName: "Гусь",
         foodWidth: "225 г",
         foodDescr: "Фаршированный яблоками",
@@ -54,6 +61,7 @@ const data = [
         imgUrl: food3
     },
     {
+        id: 8,
         foodName: "Утка",
         foodWidth: "225 г",
         foodDescr: "Фаршированная рисом, курагой и айвой",

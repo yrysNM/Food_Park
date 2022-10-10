@@ -34,4 +34,36 @@
         font-size: 13px;
         line-height: 16px;
     }
+
+    &-foodCardBasket {
+        margin-right: 25px;
+        padding: 16px 20px 17px 20px;
+    }
+
+    &-form {
+        padding: 21px 54px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        border-radius: 10px 0 0 10px;
+        border: 1px solid #72A479;
+
+        &_hidden {
+            border-radius: 0 10px 10px 0;
+            background: inherit;
+        }
+
+        &.brR {
+            border-radius: 10px 0 0 10px;
+        }
+
+        &.brL {
+            border-radius: 0 10px 10px 0;
+        }
+
+        &.brB {
+            border-radius: 0;
+        }
+    }
 }
