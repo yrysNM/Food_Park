@@ -6,7 +6,17 @@ const AppTerms = () => {
         <div className="terms">
             <div className="container">
                 <div className="terms__inner">
-                   цуйууйц 
+                   sdasdasd
+                   asdas
+                   das
+                   <datagrid>sd
+                    asd
+                    as
+                    da
+                    sd
+                    asd
+                    as
+                    d</datagrid> 
                 </div>
             </div>
         </div>
