@@ -4,6 +4,7 @@ import data from "../components/app-foods/data/data";
 export const DataContext = createContext(null);
 
 const DataContextProvider = ({ children }) => {
+    const [modalOpen, setModalOpen] = useState(false);
     const [toggleStylePositionFixed, setToggleStylePosition] = useState(false);
     const [isMainPage, setIsMainPage] = useState(false);
     const [foodPageId, setFoodPageId] = useState("");
@@ -37,6 +38,8 @@ const DataContextProvider = ({ children }) => {
             foodPageId,
             changeStylePosition,
             isMainPageCheckFunc,
+            setModalOpen,
+            modalOpen
         }}>
             {children}
         </DataContext.Provider>

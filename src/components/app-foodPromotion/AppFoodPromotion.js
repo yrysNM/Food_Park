@@ -1,4 +1,3 @@
-import AppFooter from "../app-footer/App-Footer";
 import AppContact from "../app-contact/AppContact";
 import food1 from "../../resources/img/foodPromotion/food1.png";
 import food2 from "../../resources/img/foodPromotion/food2.png";
@@ -30,7 +29,6 @@ const AppFoodPromotion = () => {
                 </div>
             </section>
             <AppContact />
-            <AppFooter />
         </>
     );
 }

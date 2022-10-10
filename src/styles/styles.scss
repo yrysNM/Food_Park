@@ -32,12 +32,18 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     color: #fff;
-    background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
-    background-repeat: no-repeat;
-    min-height: 100vw;
+    background: #211F20;
     transition: all 0.6s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
+}
+
+
+:root {
+    --fontFamilty: 'Gilroy', sans-serif;
+    --textColor: white;
+    --borderRadius: 10px;
+    --fontWeight: 700;
 }
 
 
@@ -66,6 +72,22 @@ ol {
 
 .text-center {
     text-align: center;
+}
+
+.buttons {
+    display: inline-block;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 10px;
+    border: none;
+    
+    color: white;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    padding: 1.7rem 3.5rem;
+
+    cursor: pointer;
 }
 
 .img {

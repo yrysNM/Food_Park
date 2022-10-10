@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AppHeader from "../app-header/AppHeader";
-import AppSubMenu from "../app-submenu/App-Submenu";
-import { AppHome, FoodCard, FoodPromotion, OrderProcessing } from "../pages";
+import AppFooter from "../app-footer/App-Footer";
+import { AppBasketPage, Home, AppTermsPage, FoodCard, FoodPromotion, OrderProcessing } from "../pages";
 
 const App = () => {
 
@@ -9,16 +9,19 @@ const App = () => {
     <Router>
       <div className="app">
         <AppHeader />
-        <AppSubMenu />
         <Routes>
-          <Route path="/" element={<AppHome />} />
           <Route path="/food/:id" element={<FoodCard />} />
           <Route path="/promotion" element={<FoodPromotion />} />
           <Route path="/orderProcessing" element={<OrderProcessing />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/basket" element={<AppBasketPage />} />
+          <Route path="/terms" element={<AppTermsPage />}/>
         </Routes>
+
+        <AppFooter />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
