@@ -7,12 +7,9 @@ const DataContextProvider = ({ children }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [toggleStylePositionFixed, setToggleStylePosition] = useState(false);
     const [isMainPage, setIsMainPage] = useState(false);
-    const [foodPageId, setFoodPageId] = useState("");
 
     const isMainPageCheckFunc = () => {
         const PATH = window.location.pathname;
-        const lastIndexPathId = PATH.lastIndexOf("/");
-        setFoodPageId(PATH.substring(lastIndexPathId + 1, PATH.length));
 
         if (PATH !== "/") {
             setIsMainPage(false);
@@ -35,7 +32,6 @@ const DataContextProvider = ({ children }) => {
             toggleStylePositionFixed,
             isMainPage,
             data,
-            foodPageId,
             changeStylePosition,
             isMainPageCheckFunc,
             setModalOpen,
