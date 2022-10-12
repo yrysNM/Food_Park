@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BasketOrderFinish = () => {
   return (
@@ -14,7 +15,11 @@ const BasketOrderFinish = () => {
       </div>
 
       <div className="order__btn">
-        <button className="order__btn-do">Оформить заказ</button>
+        <Link to="/orderProcessing">
+          <button className="order__btn-do">
+            Оформить заказ
+          </button>
+        </Link>
       </div>
     </>
   );
