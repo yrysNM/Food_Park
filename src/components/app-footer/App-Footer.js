@@ -45,9 +45,11 @@ const AppFooter = () => {
             </div>
 
             <div className="footer__links">
-              <a href="/" className="footer__link-nav">
-                О ресторане
-              </a>
+              <Link to={"/about"}>
+                <span className="footer__link-nav">
+                  О ресторане
+                </span>
+              </Link>
               <Link to={'/terms'} className="footer__link-nav">
                 Условия доставки
               </Link>
