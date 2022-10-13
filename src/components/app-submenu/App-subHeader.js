@@ -11,7 +11,7 @@ const AppSubHeader = () => {
             <div className="container">
                 <div className="subheader__inner">
                     <nav className="nav">
-                        <Link to="/orderProcessing">
+                        <Link to="/">
                             <span className="nav__link active">Холодные закуски</span>
                         </Link>
                         <a href="/" className="nav__link">Горячие закуски</a>

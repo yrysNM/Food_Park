@@ -1,24 +1,24 @@
 import { useContext, useState, useEffect } from "react";
 import { DataContext } from "../../context/DataContext";
+import { useParams } from "react-router-dom";
 import AppFoods from "../app-foods/AppFoods";
 import AppContact from "../app-contact/AppContact";
-import AppFooter from "../app-footer/App-Footer";
 import backPageArrow from "../../resources/icons/pageBackArrow.svg";
 import buyBasketIcon from "../../resources/icons/basketCardFood.svg";
 import "./appFoodCard.scss";
 
 const AppFoodCard = () => {
-    const { data, foodPageId } = useContext(DataContext);
+    const { data } = useContext(DataContext);
     const [foodData, setFoodData] = useState({});
-
+    const { id } = useParams();
     useEffect(() => {
         data.forEach(item => {
-            if (item.id === parseInt(foodPageId)) {
+            if (item.id === parseInt(id)) {
                 setFoodData(item);
             }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [foodPageId]);
+    }, [id]);
 
     return (
         <>
@@ -111,7 +111,6 @@ const AppFoodCard = () => {
 
             <AppFoods foodsData={data} titleHeadText={"С ЭТИМ ТОВАРОМ ПОКУПАЮТ"} />
             <AppContact />
-            <AppFooter />
         </>
     );
 }
