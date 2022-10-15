@@ -53,10 +53,10 @@ const AppFooter = () => {
               <Link to={'/terms'} className="footer__link-nav">
                 Условия доставки
               </Link>
-              <a href="/" className="footer__link-nav">
+              <a href="/" className="footer__link-nav" >
                 Возврат товара
               </a>
-              <Link to={"/promotion"}>
+              <Link to={"/promotion"}  >
                 <span className="footer__link-nav">
                   Акции
                 </span>

@@ -1,7 +1,9 @@
 import AppAbout from "../../app-about/App-About"
 const About = () => {
     return (
-        <AppAbout />
+        <div style={{ paddingTop: 220 }}>
+            <AppAbout />
+        </div>
     );
 }
 
