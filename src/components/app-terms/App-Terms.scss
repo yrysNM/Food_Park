@@ -6,7 +6,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
     }
 
     .term__content {
@@ -19,37 +19,52 @@
 
         margin-bottom: 2rem;
     }
-    
-    .term__content-accordin {
-        .accordin {
-            .according__title {
-                font-family: 'Gilroy', sans-serif;
-                font-weight: 500;
-                font-size: 1.8rem;
-                color: #FFFFFF;
 
-                background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                padding: 1.7rem 3rem;
-            }
-
-            .accordin__subtitle {
-                font-family: 'Gilroy', sans-serif;
-                font-weight: 400;
-                font-size: 1.6rem;
-                color: #FFFFFF;
-
-                background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
-                border-bottom-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                padding: 3.7rem 2.8rem;
-            }
-        }
-    }
 }
+}
+
+
+.accor{
+    width: 100%;
+    max-width: 500px;
+  margin-bottom: 10px;
+  transition: 0.4s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  .head {
+    cursor: pointer;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1.7rem 3rem;
+  }
+  
+  .body{
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 200ms ease-in-out;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+     
+  &.active > .body {
+    padding: 10px 20px;
+    max-height: 600px;
+  }
 }

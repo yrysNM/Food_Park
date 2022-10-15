@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import data from "../components/app-foods/data/data";
+import { termData } from "../components/app-terms/lib/data/term-data";
 
 export const DataContext = createContext(null);
 
@@ -7,6 +8,9 @@ const DataContextProvider = ({ children }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [toggleStylePositionFixed, setToggleStylePosition] = useState(false);
     const [isMainPage, setIsMainPage] = useState(false);
+    const [show, setShow] = useState(false);
+    const [term, setTerm] = useState(termData);
+
 
     const isMainPageCheckFunc = () => {
         const PATH = window.location.pathname;
@@ -26,6 +30,11 @@ const DataContextProvider = ({ children }) => {
         }
     }
 
+    function handleOpen(id) {
+        setTerm((prevTerm) => 
+        prevTerm.map(item => item.id === id ? setShow(!show) : setShow(show))
+        );
+    }
 
     return (
         <DataContext.Provider value={{
@@ -35,7 +44,10 @@ const DataContextProvider = ({ children }) => {
             changeStylePosition,
             isMainPageCheckFunc,
             setModalOpen,
-            modalOpen
+            modalOpen,
+            show,
+            handleOpen,
+            term
         }}>
             {children}
         </DataContext.Provider>

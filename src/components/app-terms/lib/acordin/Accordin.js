@@ -1,50 +1,27 @@
-import { Component, ReactDOM } from "react";
+import React from "react";
 
-export class Accordin extends Component {
+export class Accordion extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      height: 0,
-    };
+    this._handleClick = this._handleClick.bind(this);
   }
 
-  componentDidMount() {
-    window.setTimeout(() => {
-      const el = ReactDOM.findDOMNode(this);
-      const height = el.querySelector(".accordin__subtitle").scrollHeight;
-
-      this.setState({
-        height,
-      });
-    }, 333);
+  _handleClick() {
+    const acc = this._acc.children;
+    console.log(acc);
+    for (let i = 0; i < acc.length; i++) {
+      let a = acc[i];
+      a.onclick = () => a.classList.toggle("active");
+    }
   }
 
   render() {
-    const { title, subtitle, index, activeTab, activateTab } = this.props;
-
-    const { height } = this.state;
-
-    const isActive = activeTab === index;
-
-    const innerStyle = {
-      height: `${isActive ? height : 0}px`,
-    };
-    
     return (
-      <div className="accordin" role={"tabpanel"} aria-expanded={isActive}>
-        <div className="according__title" role={"tab"} onClick={activateTab}>
-          <span>{title}</span>
+      <>
+        <div ref={(a) => (this._acc = a)} onClick={this._handleClick}>
+          {this.props.children}
         </div>
-
-        <div
-          className="accordin__subtitle"
-          style={innerStyle}
-          aria-hidden={!isActive}
-        >
-          <p>{subtitle}</p>
-        </div>
-      </div>
+      </>
     );
   }
 }
