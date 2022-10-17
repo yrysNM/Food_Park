@@ -4,6 +4,7 @@ import OrderProcessing from "./order-processing";
 import AppBasketPage from "./app-basket/App-Basket-Page";
 import Home from "./app-home";
 import AppTermsPage from "./app-terms";
+import AppRetrunPage from "./app-return";
 
 export {
     AppBasketPage,
@@ -11,5 +12,6 @@ export {
     AppTermsPage,
     FoodCard, 
     FoodPromotion, 
-    OrderProcessing
+    OrderProcessing,
+    AppRetrunPage
 }

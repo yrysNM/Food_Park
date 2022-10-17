@@ -10,16 +10,17 @@ export class Accordion extends React.Component {
     const acc = this._acc.children;
     console.log(acc);
     for (let i = 0; i < acc.length; i++) {
-      let a = acc[i];
+      let a = acc[i]; 
       a.onclick = () => a.classList.toggle("active");
     }
   }
 
   render() {
+    const {children} = this.props;
     return (
       <>
         <div ref={(a) => (this._acc = a)} onClick={this._handleClick}>
-          {this.props.children}
+          {children}
         </div>
       </>
     );
