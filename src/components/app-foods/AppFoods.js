@@ -1,7 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { Pagination } from "swiper";
+import useFoodService from "../../services/foodServices";
 import buyBasketIcon from "../../resources/icons/buy.svg";
 import minusIcon from "../../resources/icons/minus.svg";
 import plusIcon from "../../resources/icons/plus.svg";
@@ -15,6 +16,7 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
     const [indexFoodChange, setIndexFoodChange] = useState(null);
     const basketBlock = useRef();
     const addRemoveBlock = useRef();
+    const { getAllFood } = useFoodService();
 
     const mouseOver = (indexFood) => {
         setToggleBlocks(false);
@@ -25,6 +27,10 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
         setToggleBlocks(true);
         setIndexFoodChange(indexFood);
     }
+
+    useEffect(() => {
+        getAllFood().then(res => console.log(res));
+    }, [])
 
     return (
         <section className="foods">
