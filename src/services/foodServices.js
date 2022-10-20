@@ -5,12 +5,20 @@ const useFoodService = () => {
     /**
      * @TODO {"status":"failure", "code":401,"message":"You are not authorized. Please read https://spoonacular.com/food-api/docs#Authentication"} need to  fixed
      */
-    const _url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2`;
+    const _apiKey = "2b8e006a9b5a4277aabb786eddabd67d";
+    const _url = `https://api.spoonacular.com/recipes/716429/information?includeNutrition=false`;
 
     const getAllFood = async () => {
-        const res = await request(_url);
+        const header = {
+            "x-api-key": _apiKey,
+        }
 
-        return res.data;
+        const res = await request({
+            url: _url,
+            headers: header
+        });
+
+        return res;
     }
 
     return {

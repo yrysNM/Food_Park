@@ -5,12 +5,12 @@ export const useHttp = () => {
     const [error, setError] = useState(null);
     const [process, setProcess] = useState("waiting");
 
-    const request = useCallback(async (
+    const request = useCallback(async ({
         url,
         method = "GET",
         body = null,
         headers = { "Content-type": "application/json" }
-    ) => {
+    }) => {
         setLoading(true);
         setProcess("loading");
 
