@@ -14,9 +14,10 @@ import "./appFoods.scss";
 const AppFoods = ({ foodsData, titleHeadText }) => {
     const [toggleBlocks, setToggleBlocks] = useState(false);
     const [indexFoodChange, setIndexFoodChange] = useState(null);
+    const [data, setData] = useState([]);
     const basketBlock = useRef();
     const addRemoveBlock = useRef();
-    const { getAllFood } = useFoodService();
+    const { getMenuSuggest } = useFoodService();
 
     const mouseOver = (indexFood) => {
         setToggleBlocks(false);
@@ -29,7 +30,7 @@ const AppFoods = ({ foodsData, titleHeadText }) => {
     }
 
     useEffect(() => {
-        getAllFood().then(res => console.log(res));
+        getMenuSuggest().then(res => setData([...data, ...res]));
     }, [])
 
     return (
