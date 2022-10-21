@@ -1,6 +1,6 @@
 import React from "react";
-import Remove from "../../../resurce/img/icons/remove.svg";
-import Food from "../../../resurce/img/menu.jpg";
+import Remove from "../../../../resurce/img/icons/remove.svg";
+import Food from "../../../../resurce/img/menu.jpg";
 
 const BasketAdd = () => {
   return (

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import AppFooter from "../app-footer/App-Footer";
 import clock1 from "../../resources/icons/clock.svg";
 import "./appOrderProcessing.scss";
 
@@ -10,9 +9,19 @@ const AppOrderProcessing = () => {
         userPhone: ""
     });
 
+    const [count, setCount] = useState(0);
+
     const handleChange = (e) => {
-        let target = e.target;
+        const target = e.target;
         setDataInput(dataInput => ({ ...dataInput, [target.name]: target.value, }));
+    }
+
+    const inc = () => {
+        setCount(count => (count += 1));
+    }
+
+    const dec = () => {
+        setCount(count => count > 0 ? count -= 1 : count);
     }
 
     return (
@@ -226,16 +235,21 @@ const AppOrderProcessing = () => {
                                 <button className="btn btn-form brL">Ко времени</button>
                             </div>
 
-                            {/* TODO: change to form */}
-                            <div className="orderFood_surContainer surBlock">
-                                <div className="orderFood_surB surP">
-                                    Укажите время
+                            <form className="form">
+                                <div className="form-wrapper">
+                                    <label className="form-label">
+                                        <input
+                                            type="datetime-local"
+                                            name="timeOrder"
+                                            value={new Date().toISOString().substring(0, new Date().toISOString().length - 1)}
+                                            onChange={() => { }}
+                                            className={`form-input`} />
+                                        <span className="form-label_spanTime">
+                                            Укажите время
+                                        </span>
+                                    </label>
                                 </div>
-                            </div>
-
-                            {/* <form className="form">
-                                <div className="form-w "
-                            </form> */}
+                            </form>
                         </div>
 
                         <div className="orderFood_surContainer ft">
@@ -244,9 +258,9 @@ const AppOrderProcessing = () => {
                                     Кол-во персон
                                 </div>
                                 <div className="orderFood__count">
-                                    <span className="cDown">-</span>
-                                    <span className="cNumber">1</span>
-                                    <span className="cUp" style={{ fontSize: "15px" }}>+</span>
+                                    <span className="cDown" onClick={dec}>-</span>
+                                    <span className="cNumber">{count}</span>
+                                    <span className="cUp" style={{ fontSize: "15px" }} onClick={inc}>+</span>
                                 </div>
                             </div>
                         </div>
@@ -305,8 +319,6 @@ const AppOrderProcessing = () => {
                     </form>
                 </div>
             </div>
-
-            <AppFooter />
         </>
     );
 }

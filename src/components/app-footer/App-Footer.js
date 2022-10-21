@@ -1,6 +1,5 @@
 import "./App-Footer.scss";
 import Arrow from "../../resurce/img/icons/arrow.svg";
-
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -46,18 +45,22 @@ const AppFooter = () => {
             </div>
 
             <div className="footer__links">
-              <a href="/" className="footer__link-nav">
-                О ресторане
-              </a>
+              <Link to={"/about"}>
+                <span className="footer__link-nav">
+                  О ресторане
+                </span>
+              </Link>
               <Link to={'/terms'} className="footer__link-nav">
                 Условия доставки
               </Link>
-              <a href="/" className="footer__link-nav">
+              <a href="/" className="footer__link-nav" >
                 Возврат товара
               </a>
-              <a href="/" className="footer__link-nav">
-                Акции
-              </a>
+              <Link to={"/promotion"}  >
+                <span className="footer__link-nav">
+                  Акции
+                </span>
+              </Link>
             </div>
           </div>
         </div>

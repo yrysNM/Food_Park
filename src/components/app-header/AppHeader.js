@@ -15,6 +15,8 @@ const AppHeader = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeStylePosition);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

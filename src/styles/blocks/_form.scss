@@ -1,5 +1,4 @@
 .form {
-    margin-top: 31px;
 
     &.mt22 {
         margin-top: 22px;
@@ -155,6 +154,12 @@
                 color: #72A479;
                 text-decoration: underline;
             }
+        }
+
+        &_spanTime {
+            position: absolute;
+            top: -2em;
+            left: 3.7em;
         }
     }
 }
