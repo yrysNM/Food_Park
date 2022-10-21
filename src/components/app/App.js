@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import AppHeader from "../app-header/AppHeader";
 import AppSubmenu from "../app-submenu/App-Submenu";
 import AppFooter from "../app-footer/App-Footer";
-import { AppBasketPage, Home, AppTermsPage, FoodCard, FoodPromotion, OrderProcessing, About } from "../pages";
+import { AppBasketPage, Home, AppTermsPage, FoodCard, FoodPromotion, OrderProcessing, About, AppRetrunPage } from "../pages";
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -19,7 +19,6 @@ const App = () => {
   return (
     <Router>
       <Wrapper>
-
         <div className="app">
           <AppHeader />
           <AppSubmenu />
@@ -32,6 +31,7 @@ const App = () => {
             <Route path="/basket" element={<AppBasketPage />} />
             <Route path="/terms" element={<AppTermsPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/return" element={<AppRetrunPage />} />
           </Routes>
 
           <AppFooter />

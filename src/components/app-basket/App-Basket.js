@@ -1,9 +1,9 @@
 import "./App-Basket.scss";
 
 import React from "react";
-import BasketAdd from "./basket-data/Basket-Add";
-import BasketOtherAdd from "./basket-data/Basket-Other-Add";
-import BasketOrderFinish from "./basket-data/Basket-Order-Finish";
+import BasketAdd from "./lib/basket-data/Basket-Add";
+import BasketOtherAdd from "./lib/basket-data/Basket-Other-Add";
+import BasketOrderFinish from "./lib/basket-data/Basket-Order-Finish";
 
 const AppBasket = () => {
   return (

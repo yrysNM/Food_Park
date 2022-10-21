@@ -1,5 +1,5 @@
 import React from "react";
-import Food from "../../../resurce/img/menu.jpg";
+import Food from "../../../../resurce/img/menu.jpg";
 
 const BasketOtherAdd = () => {
   return (
